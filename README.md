@@ -1,14 +1,17 @@
-# PairPlay
+# Firebase setup
 
-PairPlay is a 1-to-1 couple discovery prototype: public discovery, compatibility scoring, mutual connection, private two-person rooms, games and safety rules.
+1. Create a Firebase project.
+2. Enable Authentication -> Google provider.
+3. Create a Firestore database.
+4. Add Android app(s) in the Firebase console.
+5. Install FlutterFire CLI and run `flutterfire configure` from the app root.
+6. Deploy Firestore rules from `firestore.rules` after reviewing them for your final schema.
+7. Add Cloud Functions for authoritative matchmaking, abuse checks and notifications.
 
-## Run the online demo locally
-1. Install Node.js 18+
-2. `npm install`
-3. `node server.js`
-4. Open `http://localhost:8080`
-
-For public testing, deploy this Node.js server to a public host with WebSocket support. The generated invite link can then be shared from anywhere.
-
-## Production next steps
-Firebase/managed database persistence, Google Sign-In, robust age verification/Play Console Restrict Minor Access, server-side moderation, report/block persistence, privacy policy, account deletion, rate limiting, anti-abuse, and secure billing are still required before Play Store release.
+The client must never decide whether a user is eligible for a match. The server should enforce:
+- adult eligibility / age-restricted access
+- opposite selected gender matching rule
+- one active partner at a time
+- block/unmatch exclusions
+- rate limits / anti-spam
+- report escalation

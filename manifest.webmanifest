@@ -1,0 +1,9 @@
+{
+  "name":"PairPlay",
+  "short_name":"PairPlay",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#faf8fc",
+  "theme_color":"#ff4f7b",
+  "description":"PairPlay — game-first 1-to-1 connection and private couple rooms"
+}
