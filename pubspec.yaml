@@ -1,0 +1,23 @@
+name: pairplay
+description: PairPlay - play first, match naturally, talk privately.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^4.0.0
+  firebase_auth: ^6.6.1
+  cloud_firestore: ^6.9.0
+  google_sign_in: ^7.2.0
+  firebase_storage: ^13.0.0
+  firebase_messaging: ^16.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
