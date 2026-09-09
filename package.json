@@ -1,0 +1,10 @@
+{
+  "name": "pairplay-online-demo",
+  "version": "0.5.0",
+  "private": true,
+  "description": "PairPlay online 1-to-1 custom and random room prototype",
+  "main": "server.js",
+  "scripts": {"start":"node server.js"},
+  "dependencies": {"express":"^5.1.0","ws":"^8.18.0"},
+  "engines": {"node":">=20"}
+}
